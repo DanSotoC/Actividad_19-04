@@ -10,70 +10,80 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Actividad I</title>
     <link rel="shortcut icon" href="https://media-exp1.licdn.com/dms/image/C4D0BAQE-LuyMLMByIA/company-logo_200_200/0/1593440763611?e=2159024400&v=beta&t=6y9Tyl602Mmi-RilrNR7c4tZ3IAMNjMVgMZ1agikkTQ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <style>
     body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     .w3-row-padding img {margin-bottom: 12px}
     .w3-sidebar {width: 110px;background: rgb(62, 93, 196);}
     #main {margin-left: 110px}
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style>
 
 <body>
-    <nav class="w3-sidebar w3- w3-bar-block w3-small w3-hide-small w3-center">
-        <a href="#Home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-          <i class="fa fa-home w3-xxlarge"></i>
-          <p>HOME</p>
-        </a>
-        <a href="" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-          <i class="fa fa-car w3-xxlarge "></i>
-          <p>Producto</p>
-        </a>
-        <a href= "" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-          <i class="fa fa-user-plus w3-xxlarge"></i>
-          <p>Contacto</p>
-        </a>
-        <a href= "#EndPage" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-            <i class="fa fa-arrow-circle-down w3-xxlarge"></i>
-            <p>End Page</p>
-        </a>
-        
-    </nav>
+    <br>
+    <div class="nav">
+        <a href="#">Inicio</a></li>
+        <a href="#">Producto</a></li>
+        <a href="#">Contacto</a></li>
+        <a href="pagina1.html" class="derch">Información</a>
+        </div>
     <div id="Home" class="banner w3-center">
         <h1>Bienvenido</h1>
     </div>
 
-    <div class="banner w3-center">
-        <h2> Si deseas acceder al mejor contenido de peliculas y series gratis, haz click en el enlace de abajo</h2>
-        <a href="https://cuevana3.io/" style="color: red;">HAZ CLICK AQUI</a>
-    </div>
-    <div class="banner w3-center">
-        <p>Mejores paginas para aprender CSS y HTML</p> 
-        <ul> 
-            <li>Stackoverflow</li> 
-            <li>w3schools</li> 
-            <li>www.w3.org/</li> 
-    </div>
-    <div > 
-        <p style="margin-left: 150px;" class="noticia">Día histórico. La Selección Chilena femenina sigue agrandando su legado y esta tarde igualó sin goles ante Camerún en Antalya, mantuvo la ventaja del partido de ida, y alcanzó una inédita clasificación a los Juegos Olímpicos de Tokio 2020. 
+    
 
-            En un encuentro muy duro de principio a fin y con las azules Carla Guerrero, Yessenia López, además de Daniela Zamora desde el inicio, las dirigidas por José Letelier lograron cumplir uno de los objetivos más anhelados y dirán presente en la cita olímpica de Japón.
-            
-            No obstante, fue un partido frente a un complicado elenco de las “Leonas indomables”, quienes salieron en busca de remontar el 2-1 del partido de ida. Pese a esto, el partido se concentró en el medio terreno, haciendo que el trabajo de la retaguardia encabezada por “La Jefa”, Camila Sáez y Tiane Endler no tuviera mayores inconvenientes.
-            
-            Cabe recordar que este “Generación Dorada” ya había destacado por su vicecampeonato en la Copa América 2018 y su también memorable participación en el Mundial de Francia 2019. Ahora, las chilenas comienzan a pensar en esta importante cita deportiva, donde intentarán seguir escribiendo sus nombres en el libro de historia del fútbol nacional.
-            
-            Gigantes, muchachas!</p>
+    <br><br><br>
+    <div id ="carrusel"> 
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" >
+                <img src="img/img1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="img/img2.jpg" class="d-block w-100" alt="...">
+        </div>
+        
+        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
     </div>
+    <aside>
+        <p>Cámbiate a iPhone
+            Hay muchas razones para cambiarse a iPhone.
+            Y es tan fácil que no podrás creerlo.</p>
+    </aside>
+    <section id="Footer" style="background-color: white;">
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br>
+        <footer id="footer">
 
-    <div id="EndPage" class="banner w3-center">
-        <h1>Copyright (c) 2021
-            All Rights Reserved    
-        </h1>
-    </div>
+
+      <div class="container d-md-flex py-4">
+
+          <div class="me-md-auto text-center text-md-start">
+              <div class="copyright">
+              &copy; Copyright <strong><span>talentlab.cl</span></strong>. All Rights Reserved
+              </div>
+          </div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+              <a href="#" class="twitter"><i class="fa fa-whatsapp"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          </div>
+          </div>
+      </footer>
+    </section>
+
 
 </body>
 </html>
