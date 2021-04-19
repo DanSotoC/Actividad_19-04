@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body class="w3-light-blue">
+    <div class="w3-padding-64 w3-content w3-text-grey" style="margin:0px 0px 0px 250px" id="crear_dueños">
+        <h1 class="w3-text-white" style="margin:0px 0px 0px 500px">Formulario</h1>
+        
+
+        <form method="POST" id="crear_dueño_form" target="_blank" style="margin:0px 0px 0px 250px">
+          <p><input id="nombre" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Nombre"  required name="Nombre"></p>
+          <p><input id="apellido" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Apellido" required name="Apellido"></p>
+          <p><input id="rut" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Rut" required name="Rut Ej:11111111-1"></p> <p class="text-info" id="msgerror"></p>
+          <p><input id="telefono" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Telefono" required name="Telefono"></p>
+          <p><input id="Descripcion" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Descripcion" name="Descripción"></p>
+          <p>
+            <button id="btnvalida" class="w3-button w3-light-grey w3-padding-large w3-hover-green" type="submit">
+              <i class="fa fa-paper-plane"></i> GUARDAR
+            </button>
+          </p>
+        </form>
+      </div>
+</body>
+<script>
+var Fn = {
+  // Valida el rut con su cadena completa "XXXXXXXX-X"
+  validaRut : function (rutCompleto) {
+    rutCompleto = rutCompleto.replace("‐","-");
+    if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
+      return false;
+    var tmp   = rutCompleto.split('-');
+    var digv  = tmp[1]; 
+    var rut   = tmp[0];
+    if ( digv == 'K' ) digv = 'k' ;
+    
+    return (Fn.dv(rut) == digv );
+  },
+  dv : function(T){
+    var M=0,S=1;
+    for(;T;T=Math.floor(T/10))
+      S=(S+T%10*(9-M++%6))%11;
+    return S?S-1:'k';
+  }
+}
+
+
+$("#btnvalida").click(function(){
+  if (Fn.validaRut( $("#rut").val() )){
+    console.log("Rut Valido")
+  } else {
+    alert("Rut Invalido")
+});
+
+</script>
+</html>
