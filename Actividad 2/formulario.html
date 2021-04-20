@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,11 +13,18 @@
 </head>
 
 <body class="w3-light-blue">
-  <div class="w3-padding-64 w3-content w3-text-grey" style="margin:0px 0px 0px 250px" id="crear_dueños">
-    <h1 class="w3-text-white" style="margin:0px 0px 0px 500px">Formulario</h1>
+  <div class="nav">
+    <a href="index.html">Inicio</a></li>
+    <a href="productos.html">Producto</a></li>
+    <a href="MisionVison.html">¿Quiénes Somos?</a></li>
+    <a href="pagina1.html" class="derch">Información</a>
+    <a href="formulario.html" class="derch">Registrarse</a>
+</div>
+  <div class="w3-padding-64 w3-content w3-text-grey col-md-6" style="align-self: center;">
+    <h1 class="w3-text-white">Formulario</h1>
 
 
-    <form method="POST" id="crear_dueño_form" target="_blank" style="margin:0px 0px 0px 250px">
+    <form method="POST" style="align-self: center;">
       <p><input id="nombre" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Nombre" required
           name="Nombre"></p>
       <p id="errorNombre"></p>
@@ -32,6 +40,7 @@
       <p><input id="descripcion" class="w3-input w3-padding-16 w3-hover-yellow" type="text" placeholder="Descripcion"
           name="Descripción"></p>
       <p>
+      <p id="errorDescripcion"></p>
         <button id="btnvalida" class="w3-button w3-light-grey w3-padding-large w3-hover-green" type="button" onclick="validar(); validarTodos();">
           <i class="fa fa-paper-plane"></i> GUARDAR
         </button>
@@ -118,14 +127,15 @@
 
   function validarTodos() {
     var contador = 0;
-    for (i = 0; i < 6; i++) {
+    for (i = 0; i < 5; i++) {
       var valorArreglo = arreglo[i];
       if (document.getElementById(valorArreglo).innerHTML == "") {
         contador++;
       }
     }
-    if (contador == 6) {
+    if (contador > 3) {
       document.getElementById("mensajefinal").innerHTML = "Formulario validado!";
+      alert('Usuario registrado! :)')
     }
   }
 
